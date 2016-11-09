@@ -23,8 +23,8 @@ class ViewController: UIViewController{
         
 //        emailTextfield.delegate = self                  //set delegate to textfile
 //        passwordTextField.delegate = self                  //set delegate to textfile
-//  
-       
+    
+        print("add :",addTwoInts(4, 5))
  
     }
     
@@ -44,6 +44,11 @@ class ViewController: UIViewController{
         
         
     }
+
+    func addTwoInts(_ a: Int, _ b: Int) -> Int {
+        return a + b
+    }
+   
 
     
     
