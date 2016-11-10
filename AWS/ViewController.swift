@@ -23,9 +23,15 @@ class ViewController: UIViewController{
         
 //        emailTextfield.delegate = self                  //set delegate to textfile
 //        passwordTextField.delegate = self                  //set delegate to textfile
+<<<<<<< HEAD
     
         print("add :",addTwoInts(4, 5))
+=======
+//  
+    //magic
+>>>>>>> origin/develop
  
+        print("multiple: ", multiplyTwoInts(4, 5))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +57,12 @@ class ViewController: UIViewController{
    
 
     
+    
+    //Mark: multiple 
+    
+    func multiplyTwoInts(_ a: Int, _ b: Int) -> Int {
+        return a * b
+    }
     
     
  // button event ----//
