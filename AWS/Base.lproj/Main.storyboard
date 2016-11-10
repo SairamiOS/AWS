@@ -148,6 +148,10 @@
                                     <constraint firstAttribute="height" constant="31" id="FfH-lX-8pw"/>
                                     <constraint firstAttribute="width" constant="49" id="T5n-wz-1TL"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="postDataPassing:" destination="Bkt-gZ-PbC" eventType="valueChanged" id="1Eq-eM-a4I"/>
+                                    <action selector="postDataPassingObj:" destination="Bkt-gZ-PbC" eventType="valueChanged" id="cvf-zt-EZq"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AWS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCz-Xc-2Ca">
                                 <constraints>
@@ -172,6 +176,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L6k-oo-dGu"/>
+                    <connections>
+                        <outlet property="postSwitch" destination="yT4-Rl-iM9" id="Xsk-q1-jNC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ru4-zs-Z14" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

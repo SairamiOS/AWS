@@ -10,6 +10,10 @@ import UIKit
 
 class SecoundViewController: UIViewController {
 
+    @IBOutlet weak var mySwitch: UISwitch!
+
+    @IBOutlet weak var postSwitch: UISwitch!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,9 +21,31 @@ class SecoundViewController: UIViewController {
 
         // Do any additional setup after loading the view.
          makeGetRequest()
-        // makeGetRequest()
     }
+    
+    
+   // mySwitch.addTarget(self, action: #selector(switchChanged(_:)), for: UIControlEvents.valueChanged)
+    
+    
+    @IBAction func postDataPassing(_ sender: AnyObject) {
+    }
+    
+    @IBAction func postDataPassingObj(_ sender: UISwitch) {
+        
+        if postSwitch.isOn {
+            // handle on
+            print("ON")
+        } else {
+            // handle off
+            print("OFF")
 
+        }
+        
+       // makePostRequest()
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -98,7 +124,7 @@ class SecoundViewController: UIViewController {
     
     func makePostRequest(){
         
-        let urlPath: String = "http://www.swiftdeveloperblog.com/http-post-example-script/"
+        let urlPath: String = "https://hr0sdvayy5.execute-api.us-west-2.amazonaws.com/beta/iotsetled/$state"
         let url: NSURL = NSURL(string: urlPath)!
         let request: NSMutableURLRequest = NSMutableURLRequest(url: url as URL)
         
