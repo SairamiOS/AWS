@@ -23,15 +23,19 @@ class ViewController: UIViewController{
         
 //        emailTextfield.delegate = self                  //set delegate to textfile
 //        passwordTextField.delegate = self                  //set delegate to textfile
-<<<<<<< HEAD
+//<<<<<<< HEAD
     
         print("add :",addTwoInts(4, 5))
-=======
+//=======
 //  
     //magic
->>>>>>> origin/develop
+//>>>>>>> origin/develop
  
         print("multiple: ", multiplyTwoInts(4, 5))
+        
+        // code developo in develop branch
+        print(greetAgain(person: "Anna"))
+        print(greetAgain(person: "Brian"))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +53,13 @@ class ViewController: UIViewController{
         // Dispose of any resources that can be recreated.
         
         
+    }
+    
+    
+    /// Marke : develop code in develp branch
+    
+    func greetAgain(person: String) -> String {
+        return "Hello again, " + person + "!"
     }
 
     func addTwoInts(_ a: Int, _ b: Int) -> Int {
