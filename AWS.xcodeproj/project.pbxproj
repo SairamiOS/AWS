@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54580C6D1DD34F9800C6726C /* SecoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54580C6C1DD34F9800C6726C /* SecoundViewController.swift */; };
+		54580C6F1DD3506500C6726C /* image003.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54580C6E1DD3506500C6726C /* image003.jpg */; };
 		54A0F76D1DC08F720086E5F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DBE4D51DBE1E9A002C4339 /* ViewController.swift */; };
-		54A0F76E1DC0C7730086E5F7 /* SecoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DBE5071DBE42B9002C4339 /* SecoundViewController.swift */; };
 		54A0F7721DC0DC620086E5F7 /* Splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 54A0F7711DC0DC620086E5F7 /* Splash.png */; };
 		54C16BEF1DC3847E006E2E9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DBE4D51DBE1E9A002C4339 /* ViewController.swift */; };
 		54DBE4D41DBE1E9A002C4339 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DBE4D31DBE1E9A002C4339 /* AppDelegate.swift */; };
@@ -17,7 +18,6 @@
 		54DBE4DE1DBE1E9A002C4339 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54DBE4DC1DBE1E9A002C4339 /* LaunchScreen.storyboard */; };
 		54DBE4E91DBE1E9A002C4339 /* AWSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DBE4E81DBE1E9A002C4339 /* AWSTests.swift */; };
 		54DBE4F41DBE1E9A002C4339 /* AWSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DBE4F31DBE1E9A002C4339 /* AWSUITests.swift */; };
-		54DBE5091DBE42B9002C4339 /* SecoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DBE5071DBE42B9002C4339 /* SecoundViewController.swift */; };
 		54F3F3E11DC1F7820092E35D /* ge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54F3F3E01DC1F7820092E35D /* ge.jpg */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		54580C6C1DD34F9800C6726C /* SecoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecoundViewController.swift; sourceTree = SOURCE_ROOT; };
+		54580C6E1DD3506500C6726C /* image003.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image003.jpg; sourceTree = "<group>"; };
 		54A0F7711DC0DC620086E5F7 /* Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Splash.png; sourceTree = "<group>"; };
 		54DBE4D01DBE1E9A002C4339 /* AWS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54DBE4D31DBE1E9A002C4339 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +55,6 @@
 		54DBE4EF1DBE1E9A002C4339 /* AWSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54DBE4F31DBE1E9A002C4339 /* AWSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSUITests.swift; sourceTree = "<group>"; };
 		54DBE4F51DBE1E9A002C4339 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		54DBE5071DBE42B9002C4339 /* SecoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecoundViewController.swift; path = ../SecoundViewController.swift; sourceTree = "<group>"; };
 		54F3F3E01DC1F7820092E35D /* ge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ge.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,12 +108,13 @@
 			children = (
 				54DBE4D31DBE1E9A002C4339 /* AppDelegate.swift */,
 				54DBE4D51DBE1E9A002C4339 /* ViewController.swift */,
-				54DBE5071DBE42B9002C4339 /* SecoundViewController.swift */,
+				54580C6C1DD34F9800C6726C /* SecoundViewController.swift */,
 				54DBE4D71DBE1E9A002C4339 /* Main.storyboard */,
 				54DBE4DA1DBE1E9A002C4339 /* Assets.xcassets */,
 				54DBE4DC1DBE1E9A002C4339 /* LaunchScreen.storyboard */,
 				54A0F7711DC0DC620086E5F7 /* Splash.png */,
 				54F3F3E01DC1F7820092E35D /* ge.jpg */,
+				54580C6E1DD3506500C6726C /* image003.jpg */,
 				54DBE4DF1DBE1E9A002C4339 /* Info.plist */,
 			);
 			path = AWS;
@@ -249,6 +251,7 @@
 				54A0F7721DC0DC620086E5F7 /* Splash.png in Resources */,
 				54DBE4DB1DBE1E9A002C4339 /* Assets.xcassets in Resources */,
 				54DBE4D91DBE1E9A002C4339 /* Main.storyboard in Resources */,
+				54580C6F1DD3506500C6726C /* image003.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54580C6D1DD34F9800C6726C /* SecoundViewController.swift in Sources */,
 				54C16BEF1DC3847E006E2E9F /* ViewController.swift in Sources */,
-				54DBE5091DBE42B9002C4339 /* SecoundViewController.swift in Sources */,
 				54DBE4D41DBE1E9A002C4339 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +286,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54A0F76E1DC0C7730086E5F7 /* SecoundViewController.swift in Sources */,
 				54DBE4E91DBE1E9A002C4339 /* AWSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
