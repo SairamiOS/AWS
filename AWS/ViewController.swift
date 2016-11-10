@@ -24,14 +24,31 @@ class ViewController: UIViewController{
 //        emailTextfield.delegate = self                  //set delegate to textfile
 //        passwordTextField.delegate = self                  //set delegate to textfile
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+//<<<<<<< HEAD
+>>>>>>> a37850c742443ec09554ab35f7f5552cb12bd734
     
         print("add :",addTwoInts(4, 5))
-=======
+//=======
+//<<<<<<< HEAD
+    
+        print("add :",addTwoInts(4, 5))
+//=======
 //  
     //magic
+<<<<<<< HEAD
 >>>>>>> origin/develop
+=======
+//>>>>>>> origin/develop
+//>>>>>>> develop
+>>>>>>> a37850c742443ec09554ab35f7f5552cb12bd734
  
         print("multiple: ", multiplyTwoInts(4, 5))
+        
+        // code developo in develop branch
+        print(greetAgain(person: "Anna"))
+        print(greetAgain(person: "Brian"))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,13 +67,23 @@ class ViewController: UIViewController{
         
         
     }
+    
+    
+    /// Marke : develop code in develp branch
+    
+    func greetAgain(person: String) -> String {
+        return "Hello again, " + person + "!"
+    }
 
     func addTwoInts(_ a: Int, _ b: Int) -> Int {
         return a + b
     }
    
 
+//<<<<<<< HEAD
+//=======
     
+//>>>>>>> develop
     
     //Mark: multiple 
     
@@ -78,6 +105,7 @@ class ViewController: UIViewController{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             
             let secondView = storyBoard.instantiateViewController(withIdentifier: "seconView") as! SecoundViewController
+            
             
             self.navigationController?.pushViewController(secondView, animated: true)
 
