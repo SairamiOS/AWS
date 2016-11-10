@@ -23,10 +23,10 @@ class ViewController: UIViewController{
         
 //        emailTextfield.delegate = self                  //set delegate to textfile
 //        passwordTextField.delegate = self                  //set delegate to textfile
-<<<<<<< HEAD
+//<<<<<<< HEAD
     
         print("add :",addTwoInts(4, 5))
-=======
+//=======
 //<<<<<<< HEAD
     
         print("add :",addTwoInts(4, 5))
@@ -34,7 +34,7 @@ class ViewController: UIViewController{
 //  
     //magic
 //>>>>>>> origin/develop
->>>>>>> develop
+//>>>>>>> develop
  
         print("multiple: ", multiplyTwoInts(4, 5))
         
@@ -72,10 +72,10 @@ class ViewController: UIViewController{
     }
    
 
-<<<<<<< HEAD
-=======
+//<<<<<<< HEAD
+//=======
     
->>>>>>> develop
+//>>>>>>> develop
     
     //Mark: multiple 
     
