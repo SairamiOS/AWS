@@ -47,4 +47,19 @@ class AWSUITests: XCTestCase {
         
         
     }
+    
+    func test_mail_valid() {
+        
+        let mailTextField = XCUIApplication().textFields["mail"]
+        mailTextField.tap()
+        mailTextField.typeText("dd")
+        
+        let app = XCUIApplication()
+        app.secureTextFields["password"].typeText("ddd")
+        app.buttons["SIGN IN"].tap()
+        app.alerts["Alert"].buttons["Ok"].tap()
+        
+        
+    }
+    
 }
