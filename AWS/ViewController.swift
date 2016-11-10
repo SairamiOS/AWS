@@ -67,6 +67,7 @@ class ViewController: UIViewController{
             
             let secondView = storyBoard.instantiateViewController(withIdentifier: "seconView") as! SecoundViewController
             
+            
             self.navigationController?.pushViewController(secondView, animated: true)
 
         

@@ -33,4 +33,18 @@ class AWSUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    //Mark : test case on login in sairamios branch
+    func testLogin() {
+        
+        let app = XCUIApplication()
+        let mailTextField = app.textFields["mail"]
+        mailTextField.tap()
+        mailTextField.typeText("asira@g.com")
+        let passwordSecureTextField = app.secureTextFields["password"]
+        passwordSecureTextField.tap()
+        passwordSecureTextField.typeText("12ed")
+        app.buttons["SIGN IN"].tap()
+        
+        
+    }
 }
