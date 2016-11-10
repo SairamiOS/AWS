@@ -23,13 +23,26 @@ class ViewController: UIViewController{
         
 //        emailTextfield.delegate = self                  //set delegate to textfile
 //        passwordTextField.delegate = self                  //set delegate to textfile
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+//<<<<<<< HEAD
+>>>>>>> a37850c742443ec09554ab35f7f5552cb12bd734
+    
+        print("add :",addTwoInts(4, 5))
+//=======
 //<<<<<<< HEAD
     
         print("add :",addTwoInts(4, 5))
 //=======
 //  
     //magic
+<<<<<<< HEAD
+>>>>>>> origin/develop
+=======
 //>>>>>>> origin/develop
+//>>>>>>> develop
+>>>>>>> a37850c742443ec09554ab35f7f5552cb12bd734
  
         print("multiple: ", multiplyTwoInts(4, 5))
         
@@ -67,7 +80,10 @@ class ViewController: UIViewController{
     }
    
 
+//<<<<<<< HEAD
+//=======
     
+//>>>>>>> develop
     
     //Mark: multiple 
     
@@ -89,6 +105,7 @@ class ViewController: UIViewController{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             
             let secondView = storyBoard.instantiateViewController(withIdentifier: "seconView") as! SecoundViewController
+            
             
             self.navigationController?.pushViewController(secondView, animated: true)
 
