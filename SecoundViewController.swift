@@ -14,11 +14,37 @@ class SecoundViewController: UIViewController {
 
     @IBOutlet weak var postSwitch: UISwitch!
 
+    @IBOutlet weak var getUpdateView: UIView!
+    
+    @IBOutlet weak var marvelView: UIView!
+    
+    @IBOutlet weak var getUpdataBnt: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.tintColor = UIColor.white
 
+        getUpdateView.layer.cornerRadius = 10;
+        getUpdateView.layer.masksToBounds = true;
+        
+        getUpdateView.layer.borderColor = UIColor.gray.cgColor;
+        getUpdateView.layer.borderWidth = 0.5;
+        
+        
+        
+        marvelView.layer.cornerRadius = 10;
+        marvelView.layer.masksToBounds = true;
+        
+        marvelView.layer.borderColor = UIColor.gray.cgColor;
+        marvelView.layer.borderWidth = 0.5;
+
+        
+        getUpdataBnt.layer.cornerRadius = 10;
+        getUpdataBnt.layer.masksToBounds = true;
+        
+        
+        
         // Do any additional setup after loading the view.
          makeGetRequest()
     }
