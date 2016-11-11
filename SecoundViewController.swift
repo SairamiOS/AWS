@@ -10,16 +10,68 @@ import UIKit
 
 class SecoundViewController: UIViewController {
 
+    @IBOutlet weak var mySwitch: UISwitch!
+
+    @IBOutlet weak var postSwitch: UISwitch!
+
+    @IBOutlet weak var getUpdateView: UIView!
+    
+    @IBOutlet weak var marvelView: UIView!
+    
+    @IBOutlet weak var getUpdataBnt: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.tintColor = UIColor.white
 
+        getUpdateView.layer.cornerRadius = 10;
+        getUpdateView.layer.masksToBounds = true;
+        
+        getUpdateView.layer.borderColor = UIColor.gray.cgColor;
+        getUpdateView.layer.borderWidth = 0.5;
+        
+        
+        
+        marvelView.layer.cornerRadius = 10;
+        marvelView.layer.masksToBounds = true;
+        
+        marvelView.layer.borderColor = UIColor.gray.cgColor;
+        marvelView.layer.borderWidth = 0.5;
+
+        
+        getUpdataBnt.layer.cornerRadius = 10;
+        getUpdataBnt.layer.masksToBounds = true;
+        
+        
+        
         // Do any additional setup after loading the view.
          makeGetRequest()
-        // makeGetRequest()
     }
+    
+    
+   // mySwitch.addTarget(self, action: #selector(switchChanged(_:)), for: UIControlEvents.valueChanged)
+    
+    
+    @IBAction func postDataPassing(_ sender: AnyObject) {
+    }
+    
+    @IBAction func postDataPassingObj(_ sender: UISwitch) {
+        
+        if postSwitch.isOn {
+            // handle on
+            print("ON")
+        } else {
+            // handle off
+            print("OFF")
 
+        }
+        
+       // makePostRequest()
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -38,6 +90,8 @@ class SecoundViewController: UIViewController {
     
     var emptyDict = [String: String]()
     var arrayOfStrings = [String]()
+    
+    // MARK: -  make GET Request
     
     func makeGetRequest(){
         
@@ -89,135 +143,72 @@ class SecoundViewController: UIViewController {
             }
             
             }.resume()
+    }
+    
+    
+    // MARK: -  make POST Request
+    
+    func makePostRequest(){
         
+        let urlPath: String = "https://hr0sdvayy5.execute-api.us-west-2.amazonaws.com/beta/iotsetled/$state"
+        let url: NSURL = NSURL(string: urlPath)!
+        let request: NSMutableURLRequest = NSMutableURLRequest(url: url as URL)
         
+        request.httpMethod = "POST"
+        let stringPost="firstName=James&lastName=Bond" // Key and Value
         
+        let data = stringPost.data(using: String.Encoding.utf8)
         
+        request.timeoutInterval = 60
+        request.httpBody=data
+        request.httpShouldHandleCookies=false
         
-        /*
-         var myUrl : String = "http://api.androidhive.info/contacts/"
-         var request : NSMutableURLRequest = NSMutableURLRequest()
-         
-         //var request = URLRequest (url:myUrl)
-         request.url = NSURL(string: myUrl) as URL?
-         request.httpMethod = "GET"
-         request.timeoutInterval = 60
-         
-         
-         let task = URLSession.shared.dataTask(with: request) {
-         
-         data, response, error in
-         
-         if error != nil {
-         
-         print(error!.localizedDescription)
-         
-         DispatchQueue.main.sync(execute: {
-         
-         AWLoader.hide()
-         })
-         return
-         }
-         }
-         */
+        //  let queue:OperationQueue = OperationQueue()
         
+        let session = URLSession.shared
         
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
+            print("Response: \(response)")})
         
-        //        NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue(), completionHandler:{ (response:URLResponse!, data: NSData!, error: NSError!) -> Void in
-        //
-        //            var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
-        //
-        //            let jsonResult: NSDictionary! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as? NSDictionary
+        task.resume()
+        
+        //        NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue(), completionHandler: {(response: URLResponse?, data: NSData?, error: NSError?) -> Void in
+        
+        //            var error: AutoreleasingUnsafeMutablePointer<NSError?>? = nil
+        //            let jsonResult: NSDictionary! = JSONSerialization.JSONObjectWithData(data, options:JSONSerialization.ReadingOptions.MutableContainers, error: error) as? NSDictionary
+        
+        do{
+            
+            if let responseObj = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary{
+                
+                if JSONSerialization.isValidJSONObject(responseObj){
+                    //Do your stuff here
+                }
+                else{
+                    //Handle error
+                }
+            }
+            else{
+                //Do your stuff here
+            }
+        }
+        catch let error as NSError {
+            print("An error occurred: \(error)")
+        }
+        
         
         //            if (jsonResult != nil) {
         //                // Success
-        //                println(jsonResult)
+        //                print(jsonResult)
         //
-        //                let dataArray = jsonResult["contacts"] as! NSArray;
+        //                let message = jsonResult["Message"] as! NSString
         //
-        //                for item in dataArray { // loop through data items
-        //
-        //                    let obj = item as! NSDictionary
-        //
-        //                    for (key, value) in obj {
-        //
-        //                        println("Key: \(key) - Value: \(value)")
-        //
-        //                        let phone = obj["phone"] as! NSDictionary;
-        //
-        //                        let mobile = phone["mobile"] as! NSString
-        //                        println(mobile)
-        //                        let home = phone["home"] as! NSString
-        //                        println(home)
-        //                        let office = phone["office"] as! NSString
-        //                        println(office)
-        //                    }
-        //                }
-        //                
-        //            } else {
+        //                print(message)
+        //            }else {
         //                // Failed
-        //                println("Failed")
+        //                print("Failed")
         //            }
-        //            
-        //        })
+        
     }
 
 }
-
-///////////////////////
-/*
-
-let urlstring = "http://social.iimprove.com/PF.Base/module/mfox/api.php/user/login"
-let parameters: [String: AnyObject] = [
-    "sEmail" : emailTF.text!,
-    "sPassword" : passwordTF.text!,
-]
-Alamofire.request(.POST, urlstring, parameters: parameters, encoding: .JSON).responseJSON
-    {
-        response in switch response.result
-        {
-        case .Success(let JSON):
-            let response = JSON as! NSDictionary
-            let keysValues = response.allValues
-            
-            let numStr = keysValues[0].integerValue
-            if (numStr == 1)
-            {
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let memberWebViewController = storyBoard.instantiateViewControllerWithIdentifier("reveal") as! SWRevealViewController
-                self.presentViewController(memberWebViewController, animated:true, completion:nil)
-            }else
-            {
-                let alertView = UIAlertController(title: "Alert", message: "\(keysValues[0])", preferredStyle: .Alert)
-                let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
-                }
-                alertView.addAction(cancelAction)
-                let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
-                }
-                alertView.addAction(OKAction)
-                
-                self.presentViewController(alertView, animated: true){
-                }
-            }
-            
-        case .Failure(let error):
-            print("Error Message: \(error)")
-        }
-}
-////// get alamofire
-
-
-
-let url = "http://api.myawesomeapp.com"
-Alamofire.request(.GET, url).validate().responseJSON { response in
-switch response.result {
-case .Success(let data):
-    let json = JSON(data)
-    let name = json["name"].stringValue
-    print(name)
-case .Failure(let error):
-    print("Request failed with error: \(error)")
-}
- 
-}
-*/

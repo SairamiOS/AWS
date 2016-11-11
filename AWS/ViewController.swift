@@ -23,7 +23,11 @@ class ViewController: UIViewController{
         
 //        emailTextfield.delegate = self                  //set delegate to textfile
 //        passwordTextField.delegate = self                  //set delegate to textfile
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 //<<<<<<< HEAD
+>>>>>>> a37850c742443ec09554ab35f7f5552cb12bd734
     
         print("add :",addTwoInts(4, 5))
 //=======
@@ -33,8 +37,12 @@ class ViewController: UIViewController{
 //=======
 //  
     //magic
+<<<<<<< HEAD
+>>>>>>> origin/develop
+=======
 //>>>>>>> origin/develop
 //>>>>>>> develop
+>>>>>>> a37850c742443ec09554ab35f7f5552cb12bd734
  
         print("multiple: ", multiplyTwoInts(4, 5))
         
@@ -126,24 +134,7 @@ class ViewController: UIViewController{
         
         }
         
-        //------------ Type of navigation navigatoin using xib -*1 -------------------//
-
-//        let newVC = SecoundViewController(nibName: "SecoundViewController",bundle: nil)
-//    
-//        self.navigationController?.pushViewController(newVC, animated: true)
-        
-         //------------ Type of navigation  progrimaitical usiing storyboard -*2 -------------------//
-
-//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//
-//        let secondView = storyBoard.instantiateViewController(withIdentifier: "seconView") as! SecoundViewController
-//        self.navigationController?.pushViewController(secondView, animated: true)
-        
-         //------------ Type of navigation using segue -*3 -------------------//
-        
-//        performSegue(withIdentifier: "seconView",
-//                     sender: self)
-
+     
     }
     
     
@@ -155,92 +146,7 @@ class ViewController: UIViewController{
         return emailTest.evaluate(with: testStr)
     }
     
-    
-    //----Textfiled delegates
-//    
-//    
-//    func textFieldDidBeginEditing(_ textField: UITextField) {    //delegate method
-//        
-//    }
-//    
-//    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {  //delegate method
-//        return false
-//    }
-//    
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
-//        
-//        textField.resignFirstResponder()
-//
-//        
-//        return true
-//    }
-    
-    
-    func makePostRequest(){
         
-        let urlPath: String = "http://www.swiftdeveloperblog.com/http-post-example-script/"
-        let url: NSURL = NSURL(string: urlPath)!
-        let request: NSMutableURLRequest = NSMutableURLRequest(url: url as URL)
-        
-        request.httpMethod = "POST"
-        let stringPost="firstName=James&lastName=Bond" // Key and Value
-        
-        let data = stringPost.data(using: String.Encoding.utf8)
-        
-        request.timeoutInterval = 60
-        request.httpBody=data
-        request.httpShouldHandleCookies=false
-        
-      //  let queue:OperationQueue = OperationQueue()
-        
-        let session = URLSession.shared
-
-        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
-            print("Response: \(response)")})
-        
-        task.resume()
-        
-//        NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue(), completionHandler: {(response: URLResponse?, data: NSData?, error: NSError?) -> Void in
-
-//            var error: AutoreleasingUnsafeMutablePointer<NSError?>? = nil
-//            let jsonResult: NSDictionary! = JSONSerialization.JSONObjectWithData(data, options:JSONSerialization.ReadingOptions.MutableContainers, error: error) as? NSDictionary
-        
-        do{
-                
-            if let responseObj = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary{
-                
-                if JSONSerialization.isValidJSONObject(responseObj){
-                    //Do your stuff here
-                }
-                else{
-                    //Handle error
-                }
-            }
-            else{
-                //Do your stuff here
-            }
-        }
-        catch let error as NSError {
-            print("An error occurred: \(error)")
-        }
-
-        
-//            if (jsonResult != nil) {
-//                // Success
-//                print(jsonResult)
-//                
-//                let message = jsonResult["Message"] as! NSString
-//                
-//                print(message)
-//            }else {
-//                // Failed
-//                print("Failed")
-//            }
-        
-    }
-
-
-    
 }
 
 
